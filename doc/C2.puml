@@ -1,0 +1,32 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Диаграмма контекста для системы выдачи списания подарочных вертификатов
+
+Person(client1, "Клиент 1", "Покупатель")
+Person(client2, "Клиент 2", "Покупатель")
+System(system1, "Демонстрационное приложение 1", "Основная система 1")
+System(system2, "Демонстрационное приложение 2", "Основная система 1")
+System(RabbitMQ, "RabbitMQ", "Брокер сообщений")
+System(BaseSertifikats, "База сертификтов", "База сертификтов")
+
+Rel(client1, system1, "РасходТовара, Подарочный сертификат (ПС)")
+Rel(client2, system2, "РасходТовара, Подарочный сертификат (ПС)")
+Rel(system1, RabbitMQ, "Регистрация ПС")
+Rel(system2, RabbitMQ, "Регистрация ПС")
+Rel(system1, RabbitMQ, "Запрос суммы ПС")
+Rel(system2, RabbitMQ, "Запрос суммы ПС")
+Rel(system1, RabbitMQ, "Списание суммы ПС")
+Rel(system2, RabbitMQ, "Списание суммы ПС")
+Rel(RabbitMQ, system1, "Ответ суммы ПС")
+Rel(RabbitMQ, system2, "Ответ суммы ПС")
+Rel(RabbitMQ, BaseSertifikats, "Регистрация ПС")
+Rel(RabbitMQ, BaseSertifikats, "Запрос суммы ПС")
+Rel(RabbitMQ, BaseSertifikats, "Списание суммы ПС")
+Rel(RabbitMQ, BaseSertifikats, "Ответ суммы ПС")
+
+@enduml

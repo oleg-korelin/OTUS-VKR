@@ -1,0 +1,15 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Диаграмма контекста для системы выдачи списания подарочных вертификатов
+
+Person(client, "Клиент", "Покупатель")
+System(system, "Демонстрационное приложение", "Основная система")
+
+Rel(client, system, "РасходТовара")
+
+@enduml
