@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ТЧПодрочныеСертификаты" id="7">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТЧПодрочныеСертификаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТЧПодрочныеСертификатыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТЧПодрочныеСертификатыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ТЧПодрочныеСертификатыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ТЧПодрочныеСертификатыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ТЧПодрочныеСертификаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПодрочныеСертификатыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТЧПодрочныеСертификатыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТЧПодрочныеСертификатыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ТЧПодрочныеСертификаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПодрочныеСертификатыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТЧПодрочныеСертификатыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТЧПодрочныеСертификатыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ТЧПодрочныеСертификаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЧПодрочныеСертификатыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТЧПодрочныеСертификатыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТЧПодрочныеСертификатыНомерСтроки" id="20">
+					<DataPath>Объект.ТЧПодрочныеСертификаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТЧПодрочныеСертификатыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТЧПодрочныеСертификатыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ТЧПодрочныеСертификатыНомерСертификата" id="23">
+					<DataPath>Объект.ТЧПодрочныеСертификаты.НомерСертификата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПодрочныеСертификатыНомерСертификатаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТЧПодрочныеСертификатыНомерСертификатаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ТЧПодрочныеСертификатыСуммаСертификата" id="26">
+					<DataPath>Объект.ТЧПодрочныеСертификаты.СуммаСертификата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЧПодрочныеСертификатыСуммаСертификатаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТЧПодрочныеСертификатыСуммаСертификатаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РегистрацияПодарочныхСертификатов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
